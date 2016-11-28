@@ -5,7 +5,8 @@ const sass = require('node-sass');
 
 var tests = [
   'left',
-  'right'
+  'right',
+  'inherit'
 ];
 
 var cleanCSS = require('./_lib/clean-css');

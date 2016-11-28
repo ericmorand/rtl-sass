@@ -66,7 +66,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
   
 * `rtl-sass-declaration-value($property, $value)`
 
-   Used to provide right-to-left support for declarations where the position if the value of the property - for example `text-align: left`.
+   Used to provide right-to-left support for declarations where the position *is* the value of the property - for example `text-align: left`.
    
    To add right-to-left support for the hypothetical CSS declaration `dummy: left`, this mixin would be called with the following form:
    

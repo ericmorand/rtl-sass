@@ -64,6 +64,36 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    
    `@include rtl-sass-declaration-1-to-4(dummy, 20px, 10px);`
   
+* `rtl-sass-declaration-explicit($property, $leftValue, $rightValue)`
+  
+     Used to provide right-to-left support for declarations where the *ltr* and *rtl* values need to be explicitly set - for example:
+     
+     ```
+      [dir="ltr"] .icon {
+          background-image: url('left-to-right.png');
+      }
+      
+      [dir="rtl"] .icon {
+          background-image: url('right-to-left.png');
+      }
+     ```
+     
+     To add right-to-left support for the hypothetical CSS declaration...
+      
+     ```
+     [dir="ltr"] .dummy {
+         dummy-property: left-to-right-value;
+     }
+     
+     [dir="rtl"] .dummy {
+         dummy-property: right-to-left-value;
+     }
+     ```
+     
+     ...this mixin would be called with the following form:
+     
+     `@include rtl-sass-declaration-explicit(dummy, left-to-right-value, right-to-left-value);`
+  
 * `rtl-sass-declaration-value($property, $value)`
 
    Used to provide right-to-left support for declarations where the position *is* the value of the property - for example `text-align: left`.

@@ -1,0 +1,11 @@
+[dir=ltr] .test, [dir=rtl] .test {
+    dummy: tomato
+}
+
+[dir=ltr] .test2 {
+    dummy: left
+}
+
+[dir=rtl] .test2 {
+    dummy: right
+}

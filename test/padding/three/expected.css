@@ -1,0 +1,20 @@
+.test {
+    padding-top: 1px;
+    padding-bottom: 3px;
+}
+
+[dir="ltr"] .test {
+    padding-right: 2px;
+}
+
+[dir="rtl"] .test {
+    padding-left: 2px;
+}
+
+[dir="ltr"] .test {
+    padding-left: 2px;
+}
+
+[dir="rtl"] .test {
+    padding-right: 2px;
+}

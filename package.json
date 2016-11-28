@@ -1,10 +1,10 @@
 {
   "name": "rtl-sass",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.2.0",
+  "description": "Right-to-left the right way with Sass",
+  "main": "src/_rtl.scss",
   "scripts": {
-    "test": "tap test/*.js --cov"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ericmorand/rtl-sass/issues"
   },
-  "homepage": "https://github.com/ericmorand/rtl-sass#readme"
+  "homepage": "https://github.com/erand/rtl-sass#readme",
+  "devDependencies": {
+    "clean-css": "^3.4.21",
+    "node-sass": "^3.13.0",
+    "tap": "^8.0.1"
+  }
 }

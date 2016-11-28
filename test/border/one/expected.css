@@ -1,0 +1,20 @@
+.test {
+    border-top: solid 1px tomato;
+    border-bottom: solid 1px tomato;
+}
+
+[dir="ltr"] .test {
+    border-right: solid 1px tomato;
+}
+
+[dir="rtl"] .test {
+    border-left: solid 1px tomato;
+}
+
+[dir="ltr"] .test {
+    border-left: solid 1px tomato;
+}
+
+[dir="rtl"] .test {
+    border-right: solid 1px tomato;
+}

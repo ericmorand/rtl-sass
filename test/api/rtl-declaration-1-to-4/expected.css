@@ -1,0 +1,17 @@
+.test {
+    dummy-top: tomato;
+    dummy-bottom: #ff0
+}
+
+[dir=rtl] .test {
+    dummy-left: green
+}
+
+[dir=ltr] .test {
+    dummy-right: green;
+    dummy-left: gray
+}
+
+[dir=rtl] .test {
+    dummy-right: gray
+}

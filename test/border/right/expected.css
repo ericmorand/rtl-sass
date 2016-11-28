@@ -1,0 +1,23 @@
+[dir=ltr] .test {
+    border-right: solid 1px tomato
+}
+
+[dir=rtl] .test {
+    border-left: solid 1px tomato
+}
+
+[dir=ltr] .test2 {
+    border-right-width: 1px;
+    border-right-color: tomato;
+    border-right-style: solid;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 2px
+}
+
+[dir=rtl] .test2 {
+    border-left-width: 1px;
+    border-left-color: tomato;
+    border-left-style: solid;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 2px
+}

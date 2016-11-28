@@ -5,21 +5,21 @@ const sass = require('node-sass');
 
 var tests = [
   {
-    name: 'rtl-declaration',
+    name: 'declaration',
     invalid: [
       'null-left-or-right',
       'null-value'
     ]
   },
   {
-    name: 'rtl-declaration-1-to-4',
+    name: 'declaration-1-to-4',
     invalid: [
       'null-one',
       'null-property'
     ]
   },
   {
-    name: 'rtl-declaration-value',
+    name: 'declaration-value',
     invalid: [
       'null-property',
       'null-value'

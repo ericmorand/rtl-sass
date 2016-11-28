@@ -1,5 +1,0 @@
-@import "../../../../src/rtl";
-
-.test {
-  @include rtl-declaration(dummy-, left, null, null);
-}

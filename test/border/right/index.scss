@@ -1,13 +1,13 @@
 @import "../../../src/rtl";
 
 .test {
-  @include border-right(solid 1px tomato);
+  @include rtl-sass-border-right(solid 1px tomato);
 }
 
 .test2 {
-  @include border-right-width(1px);
-  @include border-right-color(tomato);
-  @include border-right-style(solid);
-  @include border-top-right-radius(1px);
-  @include border-bottom-right-radius(2px);
+  @include rtl-sass-border-right-width(1px);
+  @include rtl-sass-border-right-color(tomato);
+  @include rtl-sass-border-right-style(solid);
+  @include rtl-sass-border-top-right-radius(1px);
+  @include rtl-sass-border-bottom-right-radius(2px);
 }

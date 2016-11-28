@@ -1,0 +1,5 @@
+@import "../../../../src/rtl";
+
+.test {
+  @include rtl-sass-declaration-value(color, null);
+}

@@ -1,0 +1,149 @@
+// rtl support
+@mixin border-left($value) {
+  [dir="ltr"] & {
+    border-left: $value;
+  }
+
+  [dir="rtl"] & {
+    border-right: $value;
+  }
+}
+
+@mixin border-right($value) {
+  [dir="ltr"] & {
+    border-right: $value;
+  }
+
+  [dir="rtl"] & {
+    border-left: $value;
+  }
+}
+
+@mixin margin-left($value) {
+  [dir="ltr"] & {
+    margin-left: $value;
+  }
+
+  [dir="rtl"] & {
+    margin-right: $value;
+  }
+}
+
+@mixin margin-right($value) {
+  [dir="ltr"] & {
+    margin-right: $value;
+  }
+
+  [dir="rtl"] & {
+    margin-left: $value;
+  }
+}
+
+@mixin padding-left($value) {
+  [dir="ltr"] & {
+    padding-left: $value;
+  }
+
+  [dir="rtl"] & {
+    padding-right: $value;
+  }
+}
+
+@mixin padding-right($value) {
+  [dir="ltr"] & {
+    padding-right: $value;
+  }
+
+  [dir="rtl"] & {
+    padding-left: $value;
+  }
+}
+
+@mixin padding($top, $right: null, $bottom: null, $left: null) {
+  // top only => all
+  $topValue: $top;
+  $rightValue: $top;
+  $bottomValue: $top;
+  $leftValue: $top;
+
+  @if ($top != null and $right != null and $left == null and $bottom == null) {
+    // top and right only => vertical and horizontal
+    $topValue: $top;
+    $rightValue: $right;
+    $bottomValue: $top;
+    $leftValue: $right;
+  }
+  @else {
+    @if ($top != null and $right != null and $left != null and $bottom == null) {
+      // top, right and left only => top, horizontal, bottom
+      $topValue: $top;
+      $rightValue: $right;
+      $bottomValue: $left;
+      $leftValue: $right;
+    }
+    @else {
+      // all
+      $topValue: $top;
+      $rightValue: $right;
+      $leftValue: $left;
+      $bottomValue: $bottom;
+    }
+  }
+
+  padding-top: $topValue;
+  padding-bottom: $bottomValue;
+  @include padding-left($leftValue);
+  @include padding-right($rightValue);
+}
+
+@mixin left($value) {
+  [dir="ltr"] & {
+    left: $value;
+  }
+
+  [dir="rtl"] & {
+    right: $value;
+  }
+}
+
+@mixin right($value) {
+  [dir="ltr"] & {
+    right: $value;
+  }
+
+  [dir="rtl"] & {
+    left: $value;
+  }
+}
+
+@mixin text-align($value, $important: null) {
+  [dir="ltr"] & {
+    text-align: $value $important;
+  }
+
+  [dir="rtl"] & {
+    @if ($value == left) {
+      text-align: right $important;
+    } @else if ($value == right) {
+      text-align: left $important;
+    } @else {
+      text-align: $value $important;
+    }
+  }
+}
+
+@mixin float($value, $important: null) {
+  [dir="ltr"] & {
+    float: $value $important;
+  }
+
+  [dir="rtl"] & {
+    @if ($value == left) {
+      float: right $important;
+    } @else if ($value == right) {
+      float: left $important;
+    } @else {
+      float: $value $important;
+    }
+  }
+}

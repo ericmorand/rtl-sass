@@ -1,0 +1,19 @@
+{
+  "name": "rtl-sass",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js --cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ericmorand/rtl-sass.git"
+  },
+  "author": "Eric MORAND",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericmorand/rtl-sass/issues"
+  },
+  "homepage": "https://github.com/ericmorand/rtl-sass#readme"
+}

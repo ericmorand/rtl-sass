@@ -1,4 +1,4 @@
-@import "../../../src/rtl";
+@import "../../../src/alignment";
 
 .test {
   @include rtl-sass-text-align(inherit);

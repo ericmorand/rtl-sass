@@ -1,0 +1,88 @@
+@mixin rtl-sass-declaration($property, $leftOrRight, $suffix, $value) {
+  @if ($leftOrRight == null) {
+    @error "parameter $leftOrRight can't be null in call to Mixin rtl-sass-declaration";
+  }
+
+  @if ($value == null) {
+    @error "parameter $value can't be null in call to Mixin rtl-sass-declaration";
+  }
+
+  $opposite: right;
+
+  @if ($leftOrRight == right) {
+    $opposite: left;
+  }
+
+  [dir="ltr"] & {
+    #{$property}#{$leftOrRight}#{$suffix}: $value;
+  }
+
+  [dir="rtl"] & {
+    #{$property}#{$opposite}#{$suffix}: $value;
+  }
+}
+
+@mixin rtl-sass-declaration-value($property, $value) {
+  @if ($property == null) {
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-value";
+  }
+
+  @if ($value == null) {
+    @error "parameter $value can't be null in call to Mixin rtl-sass-declaration-value";
+  }
+
+  [dir="ltr"] & {
+    #{$property}: $value;
+  }
+
+  [dir="rtl"] & {
+    @if ($value == left) {
+      #{$property}: right;
+    } @else if ($value == right) {
+      #{$property}: left;
+    } @else {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null) {
+  @if ($property == null) {
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-1-to-4";
+  }
+
+  @if ($one == null) {
+    @error "parameter $one can't be null in call to Mixin rtl-sass-declaration-1-to-4";
+  }
+
+  // one only => all
+  $topValue: $one;
+  $rightValue: $one;
+  $bottomValue: $one;
+  $leftValue: $one;
+
+  @if ($one != null and $two != null and $three == null and $four == null) {
+    // one and two only => vertical and horizontal
+    $topValue: $one;
+    $rightValue: $two;
+    $bottomValue: $one;
+    $leftValue: $two;
+  } @else if ($one != null and $two != null and $three != null and $four == null) {
+    // one, two and three only => top, horizontal and bottom
+    $topValue: $one;
+    $rightValue: $two;
+    $bottomValue: $three;
+    $leftValue: $two;
+  } @else if ($one != null and $two != null and $three != null and $four != null) {
+    // all
+    $topValue: $one;
+    $rightValue: $two;
+    $leftValue: $three;
+    $bottomValue: $four;
+  }
+
+  #{$property}top: $topValue;
+  @include rtl-sass-declaration($property, right, null, $rightValue);
+  #{$property}bottom: $bottomValue;
+  @include rtl-sass-declaration($property, left, null, $leftValue);
+}

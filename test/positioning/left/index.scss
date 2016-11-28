@@ -1,5 +1,9 @@
-@import "../../../src/rtl";
+@import "../../../src/positioning";
 
 .test {
   @include rtl-sass-left(1px);
+}
+
+.test2 {
+  @include rtl-sass-float(left);
 }

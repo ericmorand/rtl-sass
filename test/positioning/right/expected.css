@@ -5,3 +5,11 @@
 [dir=rtl] .test {
     left: 1px
 }
+
+[dir=ltr] .test2 {
+    float: right
+}
+
+[dir=rtl] .test2 {
+    float: left
+}

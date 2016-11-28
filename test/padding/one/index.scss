@@ -1,5 +1,5 @@
 @import "../../../src/rtl";
 
 .test {
-  @include padding(1px);
+  @include rtl-sass-padding(1px);
 }

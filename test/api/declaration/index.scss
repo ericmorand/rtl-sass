@@ -1,0 +1,25 @@
+@import "../../../src/rtl";
+
+.test {
+  @include rtl-sass-declaration(null, left, -color, tomato);
+}
+
+.test2 {
+  @include rtl-sass-declaration(null, right, -color, tomato);
+}
+
+.test3 {
+  @include rtl-sass-declaration(dummy-, left, -color, tomato);
+}
+
+.test4 {
+  @include rtl-sass-declaration(dummy-, right, -color, tomato);
+}
+
+.test5 {
+  @include rtl-sass-declaration(dummy-, left, null, tomato);
+}
+
+.test6 {
+  @include rtl-sass-declaration(dummy-, right, null, tomato);
+}

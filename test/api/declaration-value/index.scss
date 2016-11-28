@@ -1,0 +1,9 @@
+@import "../../../src/rtl";
+
+.test {
+  @include rtl-sass-declaration-value(dummy, tomato);
+}
+
+.test2 {
+  @include rtl-sass-declaration-value(dummy, left);
+}

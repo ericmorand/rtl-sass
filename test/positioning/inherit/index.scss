@@ -1,0 +1,9 @@
+@import "../../../src/positioning";
+
+.test {
+  @include rtl-sass-left(inherit);
+}
+
+.test2 {
+  @include rtl-sass-float(inherit);
+}

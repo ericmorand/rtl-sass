@@ -1,4 +1,4 @@
-@import "../../../../src/rtl";
+@import "../../../../src/api";
 
 .test {
   @include rtl-sass-declaration-1-to-4(dummy-, null);

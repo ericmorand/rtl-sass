@@ -50,7 +50,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
 
 * `rtl-declaration($property, $leftOrRight, $suffix, $value)`
     
-   Used to provide right-to-left support for declarations where the position is part of the property name - for example `border-left-color(tomato)`.
+   Used to provide right-to-left support for declarations where the position is part of the property name - for example `border-left-color: tomato`.
    
    To add right-to-left support for the hypothetical CSS declaration `my-dummy-left-padding: 20px`, this mixin would be called with the following form:
    

@@ -1,0 +1,15 @@
+[dir=ltr] .test {
+    dummy: left-value
+}
+
+[dir=rtl] .test {
+    dummy: right-value
+}
+
+[dir=ltr] .test2 {
+    dummy: left-value
+}
+
+[dir=rtl] .test3 {
+    dummy: right-value
+}

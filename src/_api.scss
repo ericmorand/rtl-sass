@@ -86,3 +86,21 @@
   #{$property}bottom: $bottomValue;
   @include rtl-sass-declaration($property, left, null, $leftValue);
 }
+
+@mixin rtl-sass-declaration-explicit($property, $leftValue, $rightValue) {
+  @if ($property == null) {
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-explicit";
+  }
+
+  @if ($leftValue != null) {
+    [dir="ltr"] & {
+      #{$property}: $leftValue;
+    }
+  }
+
+  @if ($rightValue != null) {
+    [dir="rtl"] & {
+      #{$property}: $rightValue;
+    }
+  }
+}

@@ -19,6 +19,12 @@ var tests = [
     ]
   },
   {
+    name: 'declaration-explicit',
+    invalid: [
+      'null-property'
+    ]
+  },
+  {
     name: 'declaration-value',
     invalid: [
       'null-property',

@@ -1,9 +1,0 @@
-@import "../../../src/rtl";
-
-.test {
-  @include rtl-declaration-value(dummy, tomato);
-}
-
-.test2 {
-  @include rtl-declaration-value(dummy, left);
-}

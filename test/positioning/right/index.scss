@@ -1,5 +1,5 @@
 @import "../../../src/rtl";
 
 .test {
-  @include right(1px);
+  @include rtl-sass-right(1px);
 }

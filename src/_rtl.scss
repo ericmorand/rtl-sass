@@ -1,10 +1,10 @@
-@mixin rtl-declaration($property, $leftOrRight, $suffix, $value) {
+@mixin rtl-sass-declaration($property, $leftOrRight, $suffix, $value) {
   @if ($leftOrRight == null) {
-    @error "parameter $leftOrRight can't be null in call to Mixin rtl-declaration";
+    @error "parameter $leftOrRight can't be null in call to Mixin rtl-sass-declaration";
   }
 
   @if ($value == null) {
-    @error "parameter $value can't be null in call to Mixin rtl-declaration";
+    @error "parameter $value can't be null in call to Mixin rtl-sass-declaration";
   }
 
   $opposite: right;
@@ -22,13 +22,13 @@
   }
 }
 
-@mixin rtl-declaration-value($property, $value) {
+@mixin rtl-sass-declaration-value($property, $value) {
   @if ($property == null) {
-    @error "parameter $property can't be null in call to Mixin rtl-declaration-value";
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-value";
   }
 
   @if ($value == null) {
-    @error "parameter $value can't be null in call to Mixin rtl-declaration-value";
+    @error "parameter $value can't be null in call to Mixin rtl-sass-declaration-value";
   }
 
   [dir="ltr"] & {
@@ -46,13 +46,13 @@
   }
 }
 
-@mixin rtl-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null) {
+@mixin rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null) {
   @if ($property == null) {
-    @error "parameter $property can't be null in call to Mixin rtl-declaration-1-to-4";
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-1-to-4";
   }
 
   @if ($one == null) {
-    @error "parameter $one can't be null in call to Mixin rtl-declaration-1-to-4";
+    @error "parameter $one can't be null in call to Mixin rtl-sass-declaration-1-to-4";
   }
 
   // one only => all
@@ -82,109 +82,109 @@
   }
 
   #{$property}top: $topValue;
-  @include rtl-declaration($property, right, null, $rightValue);
+  @include rtl-sass-declaration($property, right, null, $rightValue);
   #{$property}bottom: $bottomValue;
-  @include rtl-declaration($property, left, null, $leftValue);
+  @include rtl-sass-declaration($property, left, null, $leftValue);
 }
 
 /**********/
 /* border */
 /**********/
 // left
-@mixin border-left($value) {
-  @include rtl-declaration(border-, left, null, $value);
+@mixin rtl-sass-border-left($value) {
+  @include rtl-sass-declaration(border-, left, null, $value);
 }
 
-@mixin border-left-color($value) {
-  @include rtl-declaration(border-, left, -color, $value);
+@mixin rtl-sass-border-left-color($value) {
+  @include rtl-sass-declaration(border-, left, -color, $value);
 }
 
-@mixin border-left-style($value) {
-  @include rtl-declaration(border-, left, -style, $value);
+@mixin rtl-sass-border-left-style($value) {
+  @include rtl-sass-declaration(border-, left, -style, $value);
 }
 
-@mixin border-left-width($value) {
-  @include rtl-declaration(border-, left, -width, $value);
+@mixin rtl-sass-border-left-width($value) {
+  @include rtl-sass-declaration(border-, left, -width, $value);
 }
 
-@mixin border-top-left-radius($value) {
-  @include rtl-declaration(border-top-, left, -radius, $value);
+@mixin rtl-sass-border-top-left-radius($value) {
+  @include rtl-sass-declaration(border-top-, left, -radius, $value);
 }
 
-@mixin border-bottom-left-radius($value) {
-  @include rtl-declaration(border-bottom-, left, -radius, $value);
+@mixin rtl-sass-border-bottom-left-radius($value) {
+  @include rtl-sass-declaration(border-bottom-, left, -radius, $value);
 }
 
 // right
-@mixin border-right($value) {
-  @include rtl-declaration(border-, right, null, $value);
+@mixin rtl-sass-border-right($value) {
+  @include rtl-sass-declaration(border-, right, null, $value);
 }
 
-@mixin border-right-color($value) {
-  @include rtl-declaration(border-, right, -color, $value);
+@mixin rtl-sass-border-right-color($value) {
+  @include rtl-sass-declaration(border-, right, -color, $value);
 }
 
-@mixin border-right-style($value) {
-  @include rtl-declaration(border-, right, -style, $value);
+@mixin rtl-sass-border-right-style($value) {
+  @include rtl-sass-declaration(border-, right, -style, $value);
 }
 
-@mixin border-right-width($value) {
-  @include rtl-declaration(border-, right, -width, $value);
+@mixin rtl-sass-border-right-width($value) {
+  @include rtl-sass-declaration(border-, right, -width, $value);
 }
 
-@mixin border-top-right-radius($value) {
-  @include rtl-declaration(border-top-, right, -radius, $value);
+@mixin rtl-sass-border-top-right-radius($value) {
+  @include rtl-sass-declaration(border-top-, right, -radius, $value);
 }
 
-@mixin border-bottom-right-radius($value) {
-  @include rtl-declaration(border-bottom-, right, -radius, $value);
+@mixin rtl-sass-border-bottom-right-radius($value) {
+  @include rtl-sass-declaration(border-bottom-, right, -radius, $value);
 }
 
-@mixin border($one, $two: null, $three: null, $four: null) {
-  @include rtl-declaration-1-to-4(border-, $one, $two, $three, $four);
+@mixin rtl-sass-border($one, $two: null, $three: null, $four: null) {
+  @include rtl-sass-declaration-1-to-4(border-, $one, $two, $three, $four);
 }
 
 // margin
-@mixin margin-left($value) {
-  @include rtl-declaration(margin-, left, null, $value);
+@mixin rtl-sass-margin-left($value) {
+  @include rtl-sass-declaration(margin-, left, null, $value);
 }
 
-@mixin margin-right($value) {
-  @include rtl-declaration(margin-, right, null, $value);
+@mixin rtl-sass-margin-right($value) {
+  @include rtl-sass-declaration(margin-, right, null, $value);
 }
 
-@mixin margin($one, $two: null, $three: null, $four: null) {
-  @include rtl-declaration-1-to-4(margin-, $one, $two, $three, $four);
+@mixin rtl-sass-margin($one, $two: null, $three: null, $four: null) {
+  @include rtl-sass-declaration-1-to-4(margin-, $one, $two, $three, $four);
 }
 
 // padding
-@mixin padding-left($value) {
-  @include rtl-declaration(padding-, left, null, $value);
+@mixin rtl-sass-padding-left($value) {
+  @include rtl-sass-declaration(padding-, left, null, $value);
 }
 
-@mixin padding-right($value) {
-  @include rtl-declaration(padding-, right, null, $value);
+@mixin rtl-sass-padding-right($value) {
+  @include rtl-sass-declaration(padding-, right, null, $value);
 }
 
-@mixin padding($one, $two: null, $three: null, $four: null) {
-  @include rtl-declaration-1-to-4(padding-, $one, $two, $three, $four);
+@mixin rtl-sass-padding($one, $two: null, $three: null, $four: null) {
+  @include rtl-sass-declaration-1-to-4(padding-, $one, $two, $three, $four);
 }
 
 // positioning
-@mixin left($value) {
-  @include rtl-declaration(null, left, null, $value);
+@mixin rtl-sass-left($value) {
+  @include rtl-sass-declaration(null, left, null, $value);
 }
 
-@mixin right($value) {
-  @include rtl-declaration(null, right, null, $value);
+@mixin rtl-sass-right($value) {
+  @include rtl-sass-declaration(null, right, null, $value);
 }
 
 // text-align
-@mixin text-align($value) {
-  @include rtl-declaration-value(text-align, $value);
+@mixin rtl-sass-text-align($value) {
+  @include rtl-sass-declaration-value(text-align, $value);
 }
 
 // float
-@mixin float($value) {
-  @include rtl-declaration-value(float, $value);
+@mixin rtl-sass-float($value) {
+  @include rtl-sass-declaration-value(float, $value);
 }

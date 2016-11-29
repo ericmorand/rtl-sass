@@ -1,4 +1,6 @@
 @mixin rtl-sass-declaration($property, $leftOrRight, $suffix, $value) {
+  @warn "Mixin rtl-sass-declaration is deperecated, use rtl-sass-declaration-explicit instead";
+
   @if ($leftOrRight == null) {
     @error "parameter $leftOrRight can't be null in call to Mixin rtl-sass-declaration";
   }
@@ -19,6 +21,25 @@
 
   [dir="rtl"] & {
     #{$property}#{$opposite}#{$suffix}: $value;
+  }
+}
+
+
+@mixin rtl-sass-declaration-explicit($property, $leftValue, $rightValue) {
+  @if ($property == null) {
+    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-explicit";
+  }
+
+  @if ($leftValue != null) {
+    [dir="ltr"] & {
+      #{$property}: $leftValue;
+    }
+  }
+
+  @if ($rightValue != null) {
+    [dir="rtl"] & {
+      #{$property}: $rightValue;
+    }
   }
 }
 
@@ -81,26 +102,10 @@
     $bottomValue: $four;
   }
 
-  #{$property}top: $topValue;
-  @include rtl-sass-declaration($property, right, null, $rightValue);
-  #{$property}bottom: $bottomValue;
-  @include rtl-sass-declaration($property, left, null, $leftValue);
-}
-
-@mixin rtl-sass-declaration-explicit($property, $leftValue, $rightValue) {
-  @if ($property == null) {
-    @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-explicit";
-  }
-
-  @if ($leftValue != null) {
-    [dir="ltr"] & {
-      #{$property}: $leftValue;
-    }
-  }
-
-  @if ($rightValue != null) {
-    [dir="rtl"] & {
-      #{$property}: $rightValue;
-    }
-  }
+  #{$property}-top: $topValue;
+  @include rtl-sass-declaration-explicit(#{$property}-right, $rightValue, null);
+  @include rtl-sass-declaration-explicit(#{$property}-left, null, $rightValue);
+  #{$property}-bottom: $bottomValue;
+  @include rtl-sass-declaration-explicit(#{$property}-left, $leftValue, null);
+  @include rtl-sass-declaration-explicit(#{$property}-right, null, $leftValue);
 }

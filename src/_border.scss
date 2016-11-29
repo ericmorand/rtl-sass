@@ -2,54 +2,66 @@
 
 // left
 @mixin rtl-sass-border-left($value) {
-  @include rtl-sass-declaration(border-, left, null, $value);
+  @include rtl-sass-declaration-explicit(border-left, $value, null);
+  @include rtl-sass-declaration-explicit(border-right, null, $value);
 }
 
 @mixin rtl-sass-border-left-color($value) {
-  @include rtl-sass-declaration(border-, left, -color, $value);
+  @include rtl-sass-declaration-explicit(border-left-color, $value, null);
+  @include rtl-sass-declaration-explicit(border-right-color, null, $value);
 }
 
 @mixin rtl-sass-border-left-style($value) {
-  @include rtl-sass-declaration(border-, left, -style, $value);
+  @include rtl-sass-declaration-explicit(border-left-style, $value, null);
+  @include rtl-sass-declaration-explicit(border-right-style, null, $value);
 }
 
 @mixin rtl-sass-border-left-width($value) {
-  @include rtl-sass-declaration(border-, left, -width, $value);
+  @include rtl-sass-declaration-explicit(border-left-width, $value, null);
+  @include rtl-sass-declaration-explicit(border-right-width, null, $value);
 }
 
 @mixin rtl-sass-border-top-left-radius($value) {
-  @include rtl-sass-declaration(border-top-, left, -radius, $value);
+  @include rtl-sass-declaration-explicit(border-top-left-radius, $value, null);
+  @include rtl-sass-declaration-explicit(border-top-right-radius, null, $value);
 }
 
 @mixin rtl-sass-border-bottom-left-radius($value) {
-  @include rtl-sass-declaration(border-bottom-, left, -radius, $value);
+  @include rtl-sass-declaration-explicit(border-bottom-left-radius, $value, null);
+  @include rtl-sass-declaration-explicit(border-bottom-right-radius, null, $value);
 }
 
 // right
 @mixin rtl-sass-border-right($value) {
-  @include rtl-sass-declaration(border-, right, null, $value);
+  @include rtl-sass-declaration-explicit(border-right, $value, null);
+  @include rtl-sass-declaration-explicit(border-left, null, $value);
 }
 
 @mixin rtl-sass-border-right-color($value) {
-  @include rtl-sass-declaration(border-, right, -color, $value);
+  @include rtl-sass-declaration-explicit(border-right-color, $value, null);
+  @include rtl-sass-declaration-explicit(border-left-color, null, $value);
 }
 
 @mixin rtl-sass-border-right-style($value) {
-  @include rtl-sass-declaration(border-, right, -style, $value);
+  @include rtl-sass-declaration-explicit(border-right-style, $value, null);
+  @include rtl-sass-declaration-explicit(border-left-style, null, $value);
 }
 
 @mixin rtl-sass-border-right-width($value) {
-  @include rtl-sass-declaration(border-, right, -width, $value);
+  @include rtl-sass-declaration-explicit(border-right-width, $value, null);
+  @include rtl-sass-declaration-explicit(border-left-width, null, $value);
 }
 
 @mixin rtl-sass-border-top-right-radius($value) {
-  @include rtl-sass-declaration(border-top-, right, -radius, $value);
+  @include rtl-sass-declaration-explicit(border-top-right-radius, $value, null);
+  @include rtl-sass-declaration-explicit(border-top-left-radius, null, $value);
 }
 
 @mixin rtl-sass-border-bottom-right-radius($value) {
-  @include rtl-sass-declaration(border-bottom-, right, -radius, $value);
+  @include rtl-sass-declaration-explicit(border-bottom-right-radius, $value, null);
+  @include rtl-sass-declaration-explicit(border-bottom-left-radius, null, $value);
 }
 
 @mixin rtl-sass-border($one, $two: null, $three: null, $four: null) {
-  @include rtl-sass-declaration-1-to-4(border-, $one, $two, $three, $four);
+  @include rtl-sass-declaration-1-to-4(border, $one, $two, $three, $four);
 }

@@ -2,13 +2,15 @@
 
 // margin
 @mixin rtl-sass-margin-left($value) {
-  @include rtl-sass-declaration(margin-, left, null, $value);
+  @include rtl-sass-declaration-explicit(margin-left, $value, null);
+  @include rtl-sass-declaration-explicit(margin-right, null, $value);
 }
 
 @mixin rtl-sass-margin-right($value) {
-  @include rtl-sass-declaration(margin-, right, null, $value);
+  @include rtl-sass-declaration-explicit(margin-right, $value, null);
+  @include rtl-sass-declaration-explicit(margin-left, null, $value);
 }
 
 @mixin rtl-sass-margin($one, $two: null, $three: null, $four: null) {
-  @include rtl-sass-declaration-1-to-4(margin-, $one, $two, $three, $four);
+  @include rtl-sass-declaration-1-to-4(margin, $one, $two, $three, $four);
 }

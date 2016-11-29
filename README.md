@@ -48,13 +48,9 @@ Right-to-left makes supporting right-to-left languages in Sass super simple. Use
 
 Right-to-left uses the following low-level mixins to implement its right-to-left support. Feel free to use them to provide right-to-left support to declarations that are not (yet ^^) supported by rtl-sass:
 
-* `rtl-sass-declaration($property, $leftOrRight, $suffix, $value)`
-    
-   Used to provide right-to-left support for declarations where the position is part of the property name - for example `border-left-color: tomato`.
-   
-   To add right-to-left support for the hypothetical CSS declaration `my-dummy-left-padding: 20px`, this mixin would be called with the following form:
-   
-   `@include rtl-sass-declaration(my-dummy-, left, -padding, 20px);`
+* ~~rtl-sass-declaration($property, $leftOrRight, $suffix, $value)~~
+  
+  **DEPRECATED**, use two calls of `rtl-sass-declaration-explicit` instead.
       
 * `rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null)`
 

@@ -74,7 +74,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
       }
      ```
      
-     To add right-to-left support for the hypothetical CSS declaration...
+     To mimic the hypothetical CSS declaration...
       
      ```
      [dir="ltr"] .dummy {
@@ -88,7 +88,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
      
      ...this mixin would be called with the following form:
      
-     `@include rtl-sass-declaration-explicit(dummy, left-to-right-value, right-to-left-value);`
+     `@include rtl-sass-declaration-explicit(dummy-property, left-to-right-value, right-to-left-value);`
   
 * `rtl-sass-declaration-value($property, $value)`
 

@@ -1,0 +1,13 @@
+@import "../../../src/api";
+
+.test {
+  @include rtl-sass-declaration(dummy, left-value, right-value);
+}
+
+.test2 {
+  @include rtl-sass-declaration(dummy, left-value, null);
+}
+
+.test3 {
+  @include rtl-sass-declaration(dummy, null, right-value);
+}

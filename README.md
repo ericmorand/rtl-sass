@@ -47,10 +47,26 @@ Right-to-left makes supporting right-to-left languages in Sass super simple. Use
 ## API
 
 Right-to-left uses the following low-level mixins to implement its right-to-left support. Feel free to use them to provide right-to-left support to declarations that are not (yet ^^) supported by rtl-sass:
+      
+* `rtl-sass-declaration($property, $leftToRightValue, $rightToLeftValue)`
 
-* ~~rtl-sass-declaration($property, $leftOrRight, $suffix, $value)~~
-  
-  **DEPRECATED**, use two calls of `rtl-sass-declaration-explicit` instead.
+   The lowest-level API mixin, called by all other mixins of the rtl-sass API. Provides right-to-left support by explicitly passing *ltr* and *rtl* values.
+   
+   To mimic the hypothetical CSS declaration...
+    
+   ```
+   [dir="ltr"] .dummy {
+       dummy-property: left-to-right-value;
+   }
+   
+   [dir="rtl"] .dummy {
+       dummy-property: right-to-left-value;
+   }
+   ```
+   
+   ...this mixin would be called with the following form:
+   
+   `@include rtl-sass-declaration(dummy-property, left-to-right-value, right-to-left-value);`
       
 * `rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null)`
 
@@ -59,36 +75,6 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    To add right-to-left support for the hypothetical CSS declaration `dummy: 20px 10px`, this mixin would be called with the following form:
    
    `@include rtl-sass-declaration-1-to-4(dummy, 20px, 10px);`
-  
-* `rtl-sass-declaration-explicit($property, $leftValue, $rightValue)`
-  
-     Used to provide right-to-left support for declarations where the *ltr* and *rtl* values need to be explicitly set - for example:
-     
-     ```
-      [dir="ltr"] .icon {
-          background-image: url('left-to-right.png');
-      }
-      
-      [dir="rtl"] .icon {
-          background-image: url('right-to-left.png');
-      }
-     ```
-     
-     To mimic the hypothetical CSS declaration...
-      
-     ```
-     [dir="ltr"] .dummy {
-         dummy-property: left-to-right-value;
-     }
-     
-     [dir="rtl"] .dummy {
-         dummy-property: right-to-left-value;
-     }
-     ```
-     
-     ...this mixin would be called with the following form:
-     
-     `@include rtl-sass-declaration-explicit(dummy-property, left-to-right-value, right-to-left-value);`
   
 * `rtl-sass-declaration-value($property, $value)`
 

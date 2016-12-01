@@ -2,13 +2,13 @@
 
 // padding
 @mixin rtl-sass-padding-left($value) {
-  @include rtl-sass-declaration-explicit(padding-left, $value, null);
-  @include rtl-sass-declaration-explicit(padding-right, null, $value);
+  @include rtl-sass-declaration(padding-left, $value, null);
+  @include rtl-sass-declaration(padding-right, null, $value);
 }
 
 @mixin rtl-sass-padding-right($value) {
-  @include rtl-sass-declaration-explicit(padding-right, $value, null);
-  @include rtl-sass-declaration-explicit(padding-left, null, $value);
+  @include rtl-sass-declaration(padding-right, $value, null);
+  @include rtl-sass-declaration(padding-left, null, $value);
 }
 
 @mixin rtl-sass-padding($one, $two: null, $three: null, $four: null) {

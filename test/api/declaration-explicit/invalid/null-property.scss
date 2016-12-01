@@ -1,5 +1,0 @@
-@import "../../../../src/api";
-
-.test {
-  @include rtl-sass-declaration-explicit(null, left-value, right-value);
-}

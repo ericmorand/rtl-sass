@@ -5,15 +5,16 @@ const sass = require('node-sass');
 
 var tests = [
   {
-    name: 'declaration-1-to-4',
+    name: 'declaration',
     invalid: [
-      'null-one',
-      'null-property'
+      'null-property',
+      'null-values'
     ]
   },
   {
-    name: 'declaration-explicit',
+    name: 'declaration-1-to-4',
     invalid: [
+      'null-one',
       'null-property'
     ]
   },

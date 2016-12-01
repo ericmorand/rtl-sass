@@ -52,19 +52,15 @@
     @error "parameter $value can't be null in call to Mixin rtl-sass-declaration-value";
   }
 
-  [dir="ltr"] & {
-    #{$property}: $value;
+  $rightToLeftValue: $value;
+
+  @if ($value == left) {
+    $rightToLeftValue: right;
+  } @else if ($value == right) {
+    $rightToLeftValue: left;
   }
 
-  [dir="rtl"] & {
-    @if ($value == left) {
-      #{$property}: right;
-    } @else if ($value == right) {
-      #{$property}: left;
-    } @else {
-      #{$property}: $value;
-    }
-  }
+  @include rtl-sass-declaration-explicit(#{$property}, $value, $rightToLeftValue);
 }
 
 @mixin rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null) {

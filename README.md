@@ -70,11 +70,57 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
       
 * `rtl-sass-declaration-1-to-4($property, $one, $two: null, $three: null, $four: null)`
 
-   Used to provide right-to-left support for declarations using 1-to-4 value syntax - for example `margin: 20px, 10px`. This mixin conforms to CSS specifications [regarding the number of arguments](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases).
-  
-   To add right-to-left support for the hypothetical CSS declaration `dummy: 20px 10px`, this mixin would be called with the following form:
+   Used to provide right-to-left support for declarations using 1-to-4 value syntax - for example `margin: 20px 10px`. This mixin conforms to CSS specifications [regarding the number of arguments](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases).
    
-   `@include rtl-sass-declaration-1-to-4(dummy, 20px, 10px);`
+   `$property` can be either a [Sass String](http://sass-lang.com/documentation/Sass/Script/Value/String.html) or a [Sass List](http://sass-lang.com/documentation/Sass/Script/Value/List.html). In the latter case, the first element of the list is considered as the property prefix and the second one (if any) as the property suffix. Any additional element of the list is ignored.
+  
+   To add right-to-left support for the hypothetical CSS declaration `dummy: 20px 10px 5px 0px`, this mixin would be called with one of the following forms:
+   
+   `@include rtl-sass-declaration-1-to-4(dummy, 20px, 10px, 5px, 0px);`
+   
+   `@include rtl-sass-declaration-1-to-4((dummy), 20px, 10px, 5px, 0px);`
+   
+   ...and would compile into:
+   
+   ```
+   .test {
+       dummy-top: 20px;
+       dummy-bottom: 5px
+   }
+   
+   [dir=ltr] .test {
+       dummy-right: 10px;
+       dummy-left: 0
+   }
+   
+   [dir=rtl] .test {
+       dummy-right: 0
+       dummy-left: 10px
+   }   
+   ```
+   
+   To add right-to-left support for the hypothetical CSS declaration `dummy-width: 20px 10px 5px 0px`, this mixin would be called with the following form...
+      
+   `@include rtl-sass-declaration-1-to-4((dummy, width), 20px, 10px, 5px, 0px);`
+   
+   ...and would compile into:
+   
+   ```
+   .test {
+       dummy-top-width: 20px;
+       dummy-bottom-width: 5px
+   }
+   
+   [dir=ltr] .test {
+       dummy-right-width: 10px;
+       dummy-left-width: 0
+   }
+   
+   [dir=rtl] .test {
+       dummy-right-width: 0
+       dummy-left-width: 10px
+   }
+   ```
   
 * `rtl-sass-declaration-value($property, $value)`
 

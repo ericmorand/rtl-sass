@@ -1,17 +1,61 @@
-.test {
-    dummy-top: tomato;
-    dummy-bottom: #ff0
+.test, .test-with-one-element-list {
+    lorem-top: tomato;
+    lorem-bottom: gray
+}
+
+.test-with-three-elements-list, .test-with-two-elements-list {
+    lorem-top-ipsum: tomato;
+    lorem-bottom-ipsum: gray
 }
 
 [dir=rtl] .test {
-    dummy-left: green
+    lorem-left: green
 }
 
 [dir=ltr] .test {
-    dummy-right: green;
-    dummy-left: gray
+    lorem-right: green;
+    lorem-left: #ff0
 }
 
 [dir=rtl] .test {
-    dummy-right: gray
+    lorem-right: #ff0
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-left: green
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-right: green;
+    lorem-left: #ff0
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-right: #ff0
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-left-ipsum: green
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-right-ipsum: green;
+    lorem-left-ipsum: #ff0
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-right-ipsum: #ff0
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-left-ipsum: green
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-right-ipsum: green;
+    lorem-left-ipsum: #ff0
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-right-ipsum: #ff0
 }

@@ -1,5 +1,8 @@
 @import "../../../src/border";
 
 .test {
-  @include rtl-sass-border(solid 1px tomato);
+  @include rtl-sass-border-color(cyan);
+  @include rtl-sass-border-radius(1px);
+  @include rtl-sass-border-style(dotted);
+  @include rtl-sass-border-width(1px);
 }

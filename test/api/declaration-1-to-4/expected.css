@@ -1,11 +1,10 @@
-.test, .test-with-one-element-list {
+.test {
     lorem-top: tomato;
     lorem-bottom: gray
 }
 
-.test-with-three-elements-list, .test-with-two-elements-list {
-    lorem-top-ipsum: tomato;
-    lorem-bottom-ipsum: gray
+[dir=ltr] .test {
+    lorem-right: green
 }
 
 [dir=rtl] .test {
@@ -13,12 +12,20 @@
 }
 
 [dir=ltr] .test {
-    lorem-right: green;
-    lorem-left: #ff0
+    lorem-left: yellow
 }
 
 [dir=rtl] .test {
-    lorem-right: #ff0
+    lorem-right: yellow
+}
+
+.test-with-one-element-list {
+    lorem-top: tomato;
+    lorem-bottom: gray
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-right: green
 }
 
 [dir=rtl] .test-with-one-element-list {
@@ -26,12 +33,20 @@
 }
 
 [dir=ltr] .test-with-one-element-list {
-    lorem-right: green;
-    lorem-left: #ff0
+    lorem-left: yellow
 }
 
 [dir=rtl] .test-with-one-element-list {
-    lorem-right: #ff0
+    lorem-right: yellow
+}
+
+.test-with-two-elements-list {
+    lorem-top-ipsum: tomato;
+    lorem-bottom-ipsum: gray
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-right-ipsum: green
 }
 
 [dir=rtl] .test-with-two-elements-list {
@@ -39,12 +54,20 @@
 }
 
 [dir=ltr] .test-with-two-elements-list {
-    lorem-right-ipsum: green;
-    lorem-left-ipsum: #ff0
+    lorem-left-ipsum: yellow
 }
 
 [dir=rtl] .test-with-two-elements-list {
-    lorem-right-ipsum: #ff0
+    lorem-right-ipsum: yellow
+}
+
+.test-with-three-elements-list {
+    lorem-top-ipsum: tomato;
+    lorem-bottom-ipsum: gray
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-right-ipsum: green
 }
 
 [dir=rtl] .test-with-three-elements-list {
@@ -52,10 +75,9 @@
 }
 
 [dir=ltr] .test-with-three-elements-list {
-    lorem-right-ipsum: green;
-    lorem-left-ipsum: #ff0
+    lorem-left-ipsum: yellow
 }
 
 [dir=rtl] .test-with-three-elements-list {
-    lorem-right-ipsum: #ff0
+    lorem-right-ipsum: yellow
 }

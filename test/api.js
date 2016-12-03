@@ -19,6 +19,13 @@ var tests = [
     ]
   },
   {
+    name: 'declaration-1-to-4-corner',
+    invalid: [
+      'null-one',
+      'null-property'
+    ]
+  },
+  {
     name: 'declaration-value',
     invalid: [
       'null-property',

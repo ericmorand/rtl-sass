@@ -3,12 +3,15 @@
     margin-bottom: 3px
 }
 
+[dir=ltr] .test {
+    margin-right: 2px
+}
+
 [dir=rtl] .test {
     margin-left: 2px
 }
 
 [dir=ltr] .test {
-    margin-right: 2px;
     margin-left: 4px
 }
 

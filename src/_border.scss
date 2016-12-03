@@ -1,4 +1,20 @@
 @import "api";
+// border
+@mixin rtl-sass-border-color($top, $right: null, $bottom: null, $left: null) {
+  @include rtl-sass-declaration-1-to-4((border, color), $top, $right, $bottom, $left);
+}
+
+@mixin rtl-sass-border-radius($topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null) {
+  @include rtl-sass-declaration-1-to-4-corner((border, radius), $topLeft, $topRight, $bottomRight, $bottomLeft);
+}
+
+@mixin rtl-sass-border-style($top, $right: null, $bottom: null, $left: null) {
+  @include rtl-sass-declaration-1-to-4((border, style), $top, $right, $bottom, $left);
+}
+
+@mixin rtl-sass-border-width($top, $right: null, $bottom: null, $left: null) {
+  @include rtl-sass-declaration-1-to-4((border, width), $top, $right, $bottom, $left);
+}
 
 // left
 @mixin rtl-sass-border-left($value) {
@@ -60,8 +76,4 @@
 @mixin rtl-sass-border-bottom-right-radius($value) {
   @include rtl-sass-declaration(border-bottom-right-radius, $value, null);
   @include rtl-sass-declaration(border-bottom-left-radius, null, $value);
-}
-
-@mixin rtl-sass-border($one, $two: null, $three: null, $four: null) {
-  @include rtl-sass-declaration-1-to-4(border, $one, $two, $three, $four);
 }

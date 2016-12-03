@@ -6,6 +6,10 @@
     right: inherit
 }
 
-[dir=ltr] .test2, [dir=rtl] .test2 {
+[dir=ltr] .test2 {
+    float: inherit
+}
+
+[dir=rtl] .test2 {
     float: inherit
 }

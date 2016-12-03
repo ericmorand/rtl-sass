@@ -1,20 +1,17 @@
 .test {
     padding-top: 1px;
-    padding-bottom: 4px;
+    padding-bottom: 3px
 }
 
-[dir="ltr"] .test {
+[dir=rtl] .test {
+    padding-left: 2px
+}
+
+[dir=ltr] .test {
     padding-right: 2px;
+    padding-left: 4px
 }
 
-[dir="rtl"] .test {
-    padding-left: 2px;
-}
-
-[dir="ltr"] .test {
-    padding-left: 3px;
-}
-
-[dir="rtl"] .test {
-    padding-right: 3px;
+[dir=rtl] .test {
+    padding-right: 4px
 }

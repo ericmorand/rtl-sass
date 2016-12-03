@@ -29,6 +29,16 @@
     @error "parameter $one can't be null in call to Mixin rtl-sass-declaration-1-to-4";
   }
 
+  $suffix: null;
+
+  @if (type-of($property) == 'list') {
+    @if (length($property) > 1) {
+      $suffix: -#{nth($property, 2)};
+    }
+
+    $property: nth($property, 1);
+  }
+
   // one only => all
   $topValue: $one;
   $rightValue: $one;
@@ -48,19 +58,19 @@
     $bottomValue: $three;
     $leftValue: $two;
   } @else if ($one != null and $two != null and $three != null and $four != null) {
-    // all
+    // all => top, right, bottom, left
     $topValue: $one;
     $rightValue: $two;
-    $leftValue: $three;
-    $bottomValue: $four;
+    $bottomValue: $three;
+    $leftValue: $four;
   }
 
-  #{$property}-top: $topValue;
-  @include rtl-sass-declaration(#{$property}-right, $rightValue, null);
-  @include rtl-sass-declaration(#{$property}-left, null, $rightValue);
-  #{$property}-bottom: $bottomValue;
-  @include rtl-sass-declaration(#{$property}-left, $leftValue, null);
-  @include rtl-sass-declaration(#{$property}-right, null, $leftValue);
+  #{$property}-top#{$suffix}: $topValue;
+  @include rtl-sass-declaration(#{$property}-right#{$suffix}, $rightValue, null);
+  @include rtl-sass-declaration(#{$property}-left#{$suffix}, null, $rightValue);
+  #{$property}-bottom#{$suffix}: $bottomValue;
+  @include rtl-sass-declaration(#{$property}-left#{$suffix}, $leftValue, null);
+  @include rtl-sass-declaration(#{$property}-right#{$suffix}, null, $leftValue);
 }
 
 @mixin rtl-sass-declaration-value($property, $leftToRightValue) {

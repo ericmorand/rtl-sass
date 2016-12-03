@@ -1,0 +1,17 @@
+@import "../../../src/api";
+
+.test {
+  @include rtl-sass-declaration-1-to-4-corner(lorem, 1px, 2px, 3px, 4px);
+}
+
+.test-with-one-element-list {
+  @include rtl-sass-declaration-1-to-4-corner((lorem), 1px, 2px, 3px, 4px);
+}
+
+.test-with-two-elements-list {
+  @include rtl-sass-declaration-1-to-4-corner((lorem, ipsum), 1px, 2px, 3px, 4px);
+}
+
+.test-with-three-elements-list {
+  @include rtl-sass-declaration-1-to-4-corner((lorem, ipsum, dolor), 1px, 2px, 3px, 4px);
+}

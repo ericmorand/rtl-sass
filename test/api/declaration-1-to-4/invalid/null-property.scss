@@ -1,5 +1,5 @@
 @import "../../../../src/api";
 
 .test {
-  @include rtl-sass-declaration-value(null, tomato);
+  @include rtl-sass-declaration-1-to-4(null, tomato);
 }

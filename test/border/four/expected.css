@@ -1,20 +1,17 @@
 .test {
     border-top: solid 1px tomato;
-    border-bottom: solid 4px tomato;
+    border-bottom: solid 3px tomato
 }
 
-[dir="ltr"] .test {
+[dir=rtl] .test {
+    border-left: solid 2px tomato
+}
+
+[dir=ltr] .test {
     border-right: solid 2px tomato;
+    border-left: solid 4px tomato
 }
 
-[dir="rtl"] .test {
-    border-left: solid 2px tomato;
-}
-
-[dir="ltr"] .test {
-    border-left: solid 3px tomato;
-}
-
-[dir="rtl"] .test {
-    border-right: solid 3px tomato;
+[dir=rtl] .test {
+    border-right: solid 4px tomato
 }

@@ -1,4 +1,8 @@
-[dir=ltr] .test, [dir=rtl] .test {
+[dir=ltr] .test {
+    dummy: tomato
+}
+
+[dir=rtl] .test {
     dummy: tomato
 }
 

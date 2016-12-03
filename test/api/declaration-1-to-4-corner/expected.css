@@ -1,0 +1,127 @@
+[dir=ltr] .test {
+    lorem-top-left: 1px
+}
+
+[dir=rtl] .test {
+    lorem-top-right: 1px
+}
+
+[dir=ltr] .test {
+    lorem-top-right: 2px
+}
+
+[dir=rtl] .test {
+    lorem-top-left: 2px
+}
+
+[dir=ltr] .test {
+    lorem-bottom-right: 3px
+}
+
+[dir=rtl] .test {
+    lorem-bottom-left: 3px
+}
+
+[dir=ltr] .test {
+    lorem-bottom-left: 4px
+}
+
+[dir=rtl] .test {
+    lorem-bottom-right: 4px
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-top-left: 1px
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-top-right: 1px
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-top-right: 2px
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-top-left: 2px
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-bottom-right: 3px
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-bottom-left: 3px
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-bottom-left: 4px
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-bottom-right: 4px
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-top-left-ipsum: 1px
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-top-right-ipsum: 1px
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-top-right-ipsum: 2px
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-top-left-ipsum: 2px
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-bottom-right-ipsum: 3px
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-bottom-left-ipsum: 3px
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-bottom-left-ipsum: 4px
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-bottom-right-ipsum: 4px
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-top-left-ipsum: 1px
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-top-right-ipsum: 1px
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-top-right-ipsum: 2px
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-top-left-ipsum: 2px
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-bottom-right-ipsum: 3px
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-bottom-left-ipsum: 3px
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-bottom-left-ipsum: 4px
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-bottom-right-ipsum: 4px
+}

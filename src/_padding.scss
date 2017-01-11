@@ -11,6 +11,6 @@
   @include rtl-sass-declaration(padding-left, null, $value);
 }
 
-@mixin rtl-sass-padding($one, $two: null, $three: null, $four: null) {
-  @include rtl-sass-declaration-1-to-4(padding, $one, $two, $three, $four);
+@mixin rtl-sass-padding($top, $right: null, $bottom: null, $left: null) {
+  @include rtl-sass-declaration-1-to-4(padding, $top, $right, $bottom, $left);
 }

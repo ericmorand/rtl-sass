@@ -11,6 +11,6 @@
   @include rtl-sass-declaration(margin-left, null, $value);
 }
 
-@mixin rtl-sass-margin($one, $two: null, $three: null, $four: null) {
-  @include rtl-sass-declaration-1-to-4(margin, $one, $two, $three, $four);
+@mixin rtl-sass-margin($top, $right: null, $bottom: null, $left: null) {
+  @include rtl-sass-declaration-1-to-4(margin, $top, $right, $bottom, $left);
 }

@@ -68,7 +68,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    To mimic the hypothetical CSS declaration...
     
    ```
-   [dir="ltr"] .dummy {
+   .dummy {
        dummy-property: left-to-right-value;
    }
    
@@ -98,11 +98,8 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    ```
    .test {
        dummy-top: 20px;
-       dummy-bottom: 5px;
-   }
-   
-   [dir=ltr] .test {
        dummy-right: 10px;
+       dummy-bottom: 5px;
        dummy-left: 0;
    }
    
@@ -121,11 +118,8 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    ```
    .test {
        dummy-top-width: 20px;
-       dummy-bottom-width: 5px;
-   }
-   
-   [dir=ltr] .test {
        dummy-right-width: 10px;
+       dummy-bottom-width: 5px;
        dummy-left-width: 0;
    }
    
@@ -150,7 +144,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    ...and would compile into:
    
    ```
-   [dir=ltr] .test {
+   .test {
        dummy-top-left: 20px;
        dummy-top-right: 10px;
        dummy-bottom-right: 5px;
@@ -172,7 +166,7 @@ Right-to-left uses the following low-level mixins to implement its right-to-left
    ...and would compile into:
    
    ```
-   [dir=ltr] .test {
+   .test {
        dummy-top-left-radius: 20px;
        dummy-top-right-radius: 10px;
        dummy-bottom-right-radius: 5px;

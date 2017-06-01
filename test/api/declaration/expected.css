@@ -1,15 +1,15 @@
-[dir=ltr] .test {
+.test {
     dummy: left-value
 }
 
-[dir=rtl] .test {
+[dir="rtl"] .test {
     dummy: right-value
 }
 
-[dir=ltr] .test2 {
+.test2 {
     dummy: left-value
 }
 
-[dir=rtl] .test3 {
+[dir="rtl"] .test3 {
     dummy: right-value
 }

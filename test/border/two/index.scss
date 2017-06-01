@@ -1,7 +1,7 @@
 @import "../../../src/border";
 
 .test {
-  @include rtl-sass-border-color(cyan, magenta);
+  @include rtl-sass-border-color(#0ff, #ff00ff);
   @include rtl-sass-border-radius(1px, 2px);
   @include rtl-sass-border-style(dotted, dashed);
   @include rtl-sass-border-width(1px, 2px);

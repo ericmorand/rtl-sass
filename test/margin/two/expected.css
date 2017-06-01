@@ -1,20 +1,11 @@
 .test {
     margin-top: 1px;
+    margin-right: 2px;
     margin-bottom: 1px;
-}
-
-[dir="ltr"] .test {
-    margin-right: 2px;
+    margin-left: 2px
 }
 
 [dir="rtl"] .test {
     margin-left: 2px;
-}
-
-[dir="ltr"] .test {
-    margin-left: 2px;
-}
-
-[dir="rtl"] .test {
-    margin-right: 2px;
+    margin-right: 2px
 }

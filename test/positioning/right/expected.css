@@ -1,15 +1,15 @@
-[dir=ltr] .test {
+.test {
     right: 1px
 }
 
-[dir=rtl] .test {
+[dir="rtl"] .test {
     left: 1px
 }
 
-[dir=ltr] .test2 {
+.test2 {
     float: right
 }
 
-[dir=rtl] .test2 {
+[dir="rtl"] .test2 {
     float: left
 }

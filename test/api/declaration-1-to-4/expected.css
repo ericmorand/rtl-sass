@@ -1,47 +1,83 @@
 .test {
     lorem-top: tomato;
-    lorem-right: green;
-    lorem-bottom: gray;
-    lorem-left: #ff0
+    lorem-bottom: gray
 }
 
-[dir="rtl"] .test {
-    lorem-left: green;
-    lorem-right: #ff0
+[dir=ltr] .test {
+    lorem-right: green
+}
+
+[dir=rtl] .test {
+    lorem-left: green
+}
+
+[dir=ltr] .test {
+    lorem-left: yellow
+}
+
+[dir=rtl] .test {
+    lorem-right: yellow
 }
 
 .test-with-one-element-list {
     lorem-top: tomato;
-    lorem-right: green;
-    lorem-bottom: gray;
-    lorem-left: #ff0
+    lorem-bottom: gray
 }
 
-[dir="rtl"] .test-with-one-element-list {
-    lorem-left: green;
-    lorem-right: #ff0
+[dir=ltr] .test-with-one-element-list {
+    lorem-right: green
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-left: green
+}
+
+[dir=ltr] .test-with-one-element-list {
+    lorem-left: yellow
+}
+
+[dir=rtl] .test-with-one-element-list {
+    lorem-right: yellow
 }
 
 .test-with-two-elements-list {
     lorem-top-ipsum: tomato;
-    lorem-right-ipsum: green;
-    lorem-bottom-ipsum: gray;
-    lorem-left-ipsum: #ff0
+    lorem-bottom-ipsum: gray
 }
 
-[dir="rtl"] .test-with-two-elements-list {
-    lorem-left-ipsum: green;
-    lorem-right-ipsum: #ff0
+[dir=ltr] .test-with-two-elements-list {
+    lorem-right-ipsum: green
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-left-ipsum: green
+}
+
+[dir=ltr] .test-with-two-elements-list {
+    lorem-left-ipsum: yellow
+}
+
+[dir=rtl] .test-with-two-elements-list {
+    lorem-right-ipsum: yellow
 }
 
 .test-with-three-elements-list {
     lorem-top-ipsum: tomato;
-    lorem-right-ipsum: green;
-    lorem-bottom-ipsum: gray;
-    lorem-left-ipsum: #ff0
+    lorem-bottom-ipsum: gray
 }
 
-[dir="rtl"] .test-with-three-elements-list {
-    lorem-left-ipsum: green;
-    lorem-right-ipsum: #ff0
+[dir=ltr] .test-with-three-elements-list {
+    lorem-right-ipsum: green
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-left-ipsum: green
+}
+
+[dir=ltr] .test-with-three-elements-list {
+    lorem-left-ipsum: yellow
+}
+
+[dir=rtl] .test-with-three-elements-list {
+    lorem-right-ipsum: yellow
 }

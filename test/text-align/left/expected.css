@@ -1,7 +1,7 @@
-.test {
+[dir=ltr] .test {
     text-align: left
 }
 
-[dir="rtl"] .test {
+[dir=rtl] .test {
     text-align: right
 }

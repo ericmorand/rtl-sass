@@ -31,7 +31,9 @@
   }
 
   @if ($leftToRightValue != null) {
-    #{$property}: $leftToRightValue;
+    [dir="ltr"] & {
+      #{$property}: $leftToRightValue;
+    }
   }
 
   @if ($rightToLeftValue != null) {

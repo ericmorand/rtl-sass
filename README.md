@@ -12,22 +12,22 @@ Right-to-left makes supporting right-to-left languages in Sass super simple. Use
 
 ### Border
 
-* `bottom-left-radius($value)`
-* `bottom-right-radius($value)`
-* `color($top, $right: null, $bottom: null, $left: null)`
-* `left($value)`
-* `left-color($value)`
-* `left-style($value)`
-* `left-width($value)`
-* `radius($topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null)`
-* `right($value)`
-* `right-color($value)`
-* `right-style($value)`
-* `right-width($value)`
-* `style($top, $right: null, $bottom: null, $left: null)`
-* `top-left-radius($value)`
-* `top-right-radius($value)`
-* `width($top, $right: null, $bottom: null, $left: null)`
+* `border-bottom-left-radius($value)`
+* `border-bottom-right-radius($value)`
+* `border-color($top, $right: null, $bottom: null, $left: null)`
+* `border-left($value)`
+* `border-left-color($value)`
+* `border-left-style($value)`
+* `border-left-width($value)`
+* `border-radius($topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null)`
+* `border-right($value)`
+* `border-right-color($value)`
+* `border-right-style($value)`
+* `border-right-width($value)`
+* `border-style($top, $right: null, $bottom: null, $left: null)`
+* `border-top-left-radius($value)`
+* `border-top-right-radius($value)`
+* `border-width($top, $right: null, $bottom: null, $left: null)`
 
 ### Margin
 
@@ -209,7 +209,7 @@ Then _use_ the module:
 @use "{relative/path/to/node_modules}/rtl-sass" as Rtl;
 
 .foo {
-  Rtl.color(orangered);
+  Rtl.border-color(orangered);
 }
 ```
 
@@ -221,7 +221,7 @@ You can also _use_ each module independently:
 
 .foo {
   @include Api.declaration(float, left, right);
-  @include Border.color(black);
+  @include Border.border-color(black);
 }
 ```
 

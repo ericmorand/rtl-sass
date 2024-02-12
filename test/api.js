@@ -1,7 +1,7 @@
 const t = require('tap');
 const path = require('path');
 const fs = require('fs');
-const sass = require('node-sass');
+const sass = require('sass');
 
 var tests = [
   {

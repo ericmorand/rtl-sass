@@ -1,13 +1,13 @@
-@import "../../../src/api";
+@use "../../../lib/api" as *;
 
 .test {
-  @include rtl-sass-declaration(dummy, left-value, right-value);
+  @include declaration(dummy, left-value, right-value);
 }
 
 .test2 {
-  @include rtl-sass-declaration(dummy, left-value, null);
+  @include declaration(dummy, left-value, null);
 }
 
 .test3 {
-  @include rtl-sass-declaration(dummy, null, right-value);
+  @include declaration(dummy, null, right-value);
 }

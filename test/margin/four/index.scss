@@ -1,5 +1,5 @@
-@import "../../../src/margin";
+@use "../../../lib/margin" as *;
 
 .test {
-  @include rtl-sass-margin(1px, 2px, 3px, 4px);
+  @include margin(1px, 2px, 3px, 4px);
 }

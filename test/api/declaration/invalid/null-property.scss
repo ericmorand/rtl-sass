@@ -1,5 +1,5 @@
-@import "../../../../src/api";
+@use "../../../../lib/api" as *;
 
 .test {
-  @include rtl-sass-declaration(null, left-value, right-value);
+  @include declaration(null, left-value, right-value);
 }

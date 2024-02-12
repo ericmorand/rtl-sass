@@ -1,0 +1,80 @@
+@use "api" as Api;
+
+// border
+@mixin border-color($top, $right: null, $bottom: null, $left: null) {
+  @include Api.declaration-1-to-4((border, color), $top, $right, $bottom, $left);
+}
+
+@mixin border-radius($topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null) {
+  @include Api.declaration-1-to-4-corner((border, radius), $topLeft, $topRight, $bottomRight, $bottomLeft);
+}
+
+@mixin border-style($top, $right: null, $bottom: null, $left: null) {
+  @include Api.declaration-1-to-4((border, style), $top, $right, $bottom, $left);
+}
+
+@mixin border-width($top, $right: null, $bottom: null, $left: null) {
+  @include Api.declaration-1-to-4((border, width), $top, $right, $bottom, $left);
+}
+
+// left
+@mixin border-left($value) {
+  @include Api.declaration(border-left, $value, null);
+  @include Api.declaration(border-right, null, $value);
+}
+
+@mixin border-left-color($value) {
+  @include Api.declaration(border-left-color, $value, null);
+  @include Api.declaration(border-right-color, null, $value);
+}
+
+@mixin border-left-style($value) {
+  @include Api.declaration(border-left-style, $value, null);
+  @include Api.declaration(border-right-style, null, $value);
+}
+
+@mixin border-left-width($value) {
+  @include Api.declaration(border-left-width, $value, null);
+  @include Api.declaration(border-right-width, null, $value);
+}
+
+@mixin border-top-left-radius($value) {
+  @include Api.declaration(border-top-left-radius, $value, null);
+  @include Api.declaration(border-top-right-radius, null, $value);
+}
+
+@mixin border-bottom-left-radius($value) {
+  @include Api.declaration(border-bottom-left-radius, $value, null);
+  @include Api.declaration(border-bottom-right-radius, null, $value);
+}
+
+// right
+@mixin border-right($value) {
+  @include Api.declaration(border-right, $value, null);
+  @include Api.declaration(border-left, null, $value);
+}
+
+@mixin border-right-color($value) {
+  @include Api.declaration(border-right-color, $value, null);
+  @include Api.declaration(border-left-color, null, $value);
+}
+
+@mixin border-right-style($value) {
+  @include Api.declaration(border-right-style, $value, null);
+  @include Api.declaration(border-left-style, null, $value);
+}
+
+@mixin border-right-width($value) {
+  @include Api.declaration(border-right-width, $value, null);
+  @include Api.declaration(border-left-width, null, $value);
+}
+
+@mixin border-top-right-radius($value) {
+  @include Api.declaration(border-top-right-radius, $value, null);
+  @include Api.declaration(border-top-left-radius, null, $value);
+}
+
+@mixin border-bottom-right-radius($value) {
+  @include Api.declaration(border-bottom-right-radius, $value, null);
+  @include Api.declaration(border-bottom-left-radius, null, $value);
+}

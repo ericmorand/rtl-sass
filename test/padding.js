@@ -1,13 +1,15 @@
 const t = require('tap');
 const path = require('path');
 const fs = require('fs');
-const sass = require('node-sass');
+const sass = require('sass');
 
 var tests = [
   'one',
   'two',
   'three',
-  'four'
+  'four',
+  'padding-left',
+  'padding-right'
 ];
 
 var cleanCSS = require('./_lib/clean-css');

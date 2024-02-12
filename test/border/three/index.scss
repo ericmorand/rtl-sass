@@ -1,8 +1,8 @@
-@import "../../../src/border";
+@use "../../../lib/border" as *;
 
 .test {
-  @include rtl-sass-border-color(cyan, magenta, yellow);
-  @include rtl-sass-border-radius(1px, 2px, 3px);
-  @include rtl-sass-border-style(dotted, dashed, solid);
-  @include rtl-sass-border-width(1px, 2px, 3px);
+  @include border-color(cyan, magenta, yellow);
+  @include border-radius(1px, 2px, 3px);
+  @include border-style(dotted, dashed, solid);
+  @include border-width(1px, 2px, 3px);
 }

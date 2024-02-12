@@ -1,0 +1,15 @@
+@use "api" as Api;
+
+@mixin margin-left($value) {
+  @include Api.declaration(margin-left, $value, null);
+  @include Api.declaration(margin-right, null, $value);
+}
+
+@mixin margin-right($value) {
+  @include Api.declaration(margin-right, $value, null);
+  @include Api.declaration(margin-left, null, $value);
+}
+
+@mixin margin($top, $right: null, $bottom: null, $left: null) {
+  @include Api.declaration-1-to-4(margin, $top, $right, $bottom, $left);
+}

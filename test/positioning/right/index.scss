@@ -1,9 +1,9 @@
-@import "../../../src/positioning";
+@use "../../../lib/positioning" as *;
 
 .test {
-  @include rtl-sass-right(1px);
+  @include right(1px);
 }
 
 .test2 {
-  @include rtl-sass-float(right);
+  @include float(right);
 }

@@ -1,9 +1,9 @@
-@import "../../../src/api";
+@use "../../../lib/api" as *;
 
 .test {
-  @include rtl-sass-declaration-value(dummy, tomato);
+  @include declaration-value(dummy, tomato);
 }
 
 .test2 {
-  @include rtl-sass-declaration-value(dummy, left);
+  @include declaration-value(dummy, left);
 }

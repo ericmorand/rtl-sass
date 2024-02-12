@@ -1,5 +1,5 @@
-@import "../../../src/alignment";
+@use "../../../lib/alignment" as *;
 
 .test {
-  @include rtl-sass-text-align(inherit);
+  @include text-align(inherit);
 }

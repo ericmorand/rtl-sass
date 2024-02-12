@@ -1,0 +1,5 @@
+@use "api" as Api;
+
+@mixin text-align($value) {
+  @include Api.declaration-value(text-align, $value);
+}

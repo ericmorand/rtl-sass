@@ -1,17 +1,17 @@
-@import "../../../src/api";
+@use "../../../lib/api" as *;
 
 .test {
-  @include rtl-sass-declaration-1-to-4(lorem, tomato, green, gray, yellow);
+  @include declaration-1-to-4(lorem, tomato, green, gray, yellow);
 }
 
 .test-with-one-element-list {
-  @include rtl-sass-declaration-1-to-4((lorem), tomato, green, gray, yellow);
+  @include declaration-1-to-4((lorem), tomato, green, gray, yellow);
 }
 
 .test-with-two-elements-list {
-  @include rtl-sass-declaration-1-to-4((lorem, ipsum), tomato, green, gray, yellow);
+  @include declaration-1-to-4((lorem, ipsum), tomato, green, gray, yellow);
 }
 
 .test-with-three-elements-list {
-  @include rtl-sass-declaration-1-to-4((lorem, ipsum, dolor), tomato, green, gray, yellow);
+  @include declaration-1-to-4((lorem, ipsum, dolor), tomato, green, gray, yellow);
 }

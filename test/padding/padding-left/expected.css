@@ -1,0 +1,8 @@
+[dir="ltr"] .test {
+    padding-left: 1px;
+}
+
+[dir="rtl"] .test {
+    padding-right: 1px;
+}
+

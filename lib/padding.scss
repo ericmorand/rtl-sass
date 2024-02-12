@@ -1,0 +1,15 @@
+@use "api" as Api;
+
+@mixin padding-left($value) {
+  @include Api.declaration(padding-left, $value, null);
+  @include Api.declaration(padding-right, null, $value);
+}
+
+@mixin padding-right($value) {
+  @include Api.declaration(padding-right, $value, null);
+  @include Api.declaration(padding-left, null, $value);
+}
+
+@mixin padding($top, $right: null, $bottom: null, $left: null) {
+  @include Api.declaration-1-to-4(padding, $top, $right, $bottom, $left);
+}

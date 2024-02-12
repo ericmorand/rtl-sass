@@ -1,0 +1,15 @@
+@use "api" as Api;
+
+@mixin left($value) {
+  @include Api.declaration(left, $value, null);
+  @include Api.declaration(right, null, $value);
+}
+
+@mixin right($value) {
+  @include Api.declaration(right, $value, null);
+  @include Api.declaration(left, null, $value);
+}
+
+@mixin float($value) {
+  @include Api.declaration-value(float, $value);
+}

@@ -21,7 +21,7 @@
   @return ($one, $two, $three, $four);
 }
 
-@mixin rtl-sass-declaration($property, $leftToRightValue, $rightToLeftValue) {
+@mixin declaration($property, $leftToRightValue, $rightToLeftValue) {
   @if ($property == null) {
     @error "parameter $property can't be null in call to Mixin rtl-sass-declaration";
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@mixin rtl-sass-declaration-1-to-4($property, $top, $right: null, $bottom: null, $left: null) {
+@mixin declaration-1-to-4($property, $top, $right: null, $bottom: null, $left: null) {
   @if ($property == null) {
     @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-1-to-4";
   }
@@ -65,14 +65,14 @@
   $values: extract-1-to-4-values($top, $right, $bottom, $left);
 
   #{$property}-top#{$suffix}: nth($values, 1);
-  @include rtl-sass-declaration(#{$property}-right#{$suffix}, nth($values, 2), null);
-  @include rtl-sass-declaration(#{$property}-left#{$suffix}, null, nth($values, 2));
+  @include declaration(#{$property}-right#{$suffix}, nth($values, 2), null);
+  @include declaration(#{$property}-left#{$suffix}, null, nth($values, 2));
   #{$property}-bottom#{$suffix}: nth($values, 3);
-  @include rtl-sass-declaration(#{$property}-left#{$suffix}, nth($values, 4), null);
-  @include rtl-sass-declaration(#{$property}-right#{$suffix}, null, nth($values, 4));
+  @include declaration(#{$property}-left#{$suffix}, nth($values, 4), null);
+  @include declaration(#{$property}-right#{$suffix}, null, nth($values, 4));
 }
 
-@mixin rtl-sass-declaration-1-to-4-corner($property, $topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null) {
+@mixin declaration-1-to-4-corner($property, $topLeft, $topRight: null, $bottomRight: null, $bottomLeft: null) {
   @if ($property == null) {
     @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-1-to-4-corner";
   }
@@ -93,20 +93,20 @@
 
   $values: extract-1-to-4-values($topLeft, $topRight, $bottomRight, $bottomLeft);
 
-  @include rtl-sass-declaration(#{$property}-top-left#{$suffix}, nth($values, 1), null);
-  @include rtl-sass-declaration(#{$property}-top-right#{$suffix}, null, nth($values, 1));
+  @include declaration(#{$property}-top-left#{$suffix}, nth($values, 1), null);
+  @include declaration(#{$property}-top-right#{$suffix}, null, nth($values, 1));
 
-  @include rtl-sass-declaration(#{$property}-top-right#{$suffix}, nth($values, 2), null);
-  @include rtl-sass-declaration(#{$property}-top-left#{$suffix}, null, nth($values, 2));
+  @include declaration(#{$property}-top-right#{$suffix}, nth($values, 2), null);
+  @include declaration(#{$property}-top-left#{$suffix}, null, nth($values, 2));
 
-  @include rtl-sass-declaration(#{$property}-bottom-right#{$suffix}, nth($values, 3), null);
-  @include rtl-sass-declaration(#{$property}-bottom-left#{$suffix}, null, nth($values, 3));
+  @include declaration(#{$property}-bottom-right#{$suffix}, nth($values, 3), null);
+  @include declaration(#{$property}-bottom-left#{$suffix}, null, nth($values, 3));
 
-  @include rtl-sass-declaration(#{$property}-bottom-left#{$suffix}, nth($values, 4), null);
-  @include rtl-sass-declaration(#{$property}-bottom-right#{$suffix}, null, nth($values, 4));
+  @include declaration(#{$property}-bottom-left#{$suffix}, nth($values, 4), null);
+  @include declaration(#{$property}-bottom-right#{$suffix}, null, nth($values, 4));
 }
 
-@mixin rtl-sass-declaration-value($property, $leftToRightValue) {
+@mixin declaration-value($property, $leftToRightValue) {
   @if ($property == null) {
     @error "parameter $property can't be null in call to Mixin rtl-sass-declaration-value";
   }
@@ -123,5 +123,5 @@
     $rightToLeftValue: left;
   }
 
-  @include rtl-sass-declaration(#{$property}, $leftToRightValue, $rightToLeftValue);
+  @include declaration(#{$property}, $leftToRightValue, $rightToLeftValue);
 }
